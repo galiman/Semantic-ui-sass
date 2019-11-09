@@ -1,0 +1,67 @@
+/*
+
+███████╗███████╗███╗   ███╗ █████╗ ███╗   ██╗████████╗██╗ ██████╗    ██╗   ██╗██╗
+██╔════╝██╔════╝████╗ ████║██╔══██╗████╗  ██║╚══██╔══╝██║██╔════╝    ██║   ██║██║
+███████╗█████╗  ██╔████╔██║███████║██╔██╗ ██║   ██║   ██║██║         ██║   ██║██║
+╚════██║██╔══╝  ██║╚██╔╝██║██╔══██║██║╚██╗██║   ██║   ██║██║         ██║   ██║██║
+███████║███████╗██║ ╚═╝ ██║██║  ██║██║ ╚████║   ██║   ██║╚██████╗    ╚██████╔╝██║
+╚══════╝╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝ ╚═════╝     ╚═════╝ ╚═╝
+
+  Import this file into your LESS project to use Semantic UI without build tools
+*/
+
+/* Global */
+@import "scss/reset";
+@import "scss/site";
+
+/* Elements */
+@import "scss/button";
+@import "scss/container";
+@import "scss/divider";
+@import "scss/flag";
+@import "scss/header";
+@import "scss/icon";
+@import "scss/image";
+@import "scss/input";
+@import "scss/label";
+@import "scss/list";
+@import "scss/loader";
+@import "scss/placeholder";
+@import "scss/rail";
+@import "scss/reveal";
+@import "scss/segment";
+@import "scss/step";
+
+/* Collections */
+@import "scss/breadcrumb";
+@import "scss/form";
+@import "scss/grid";
+@import "scss/menu";
+@import "scss/message";
+@import "scss/table";
+
+/* Views */
+@import "scss/ad";
+@import "scss/card";
+@import "scss/comment";
+@import "scss/feed";
+@import "scss/item";
+@import "scss/statistic";
+
+/* Modules */
+@import "scss/accordion";
+@import "scss/checkbox";
+@import "scss/dimmer";
+@import "scss/dropdown";
+@import "scss/embed";
+@import "scss/modal";
+@import "scss/nag";
+@import "scss/popup";
+@import "scss/progress";
+@import "scss/rating";
+@import "scss/search";
+@import "scss/shape";
+@import "scss/sidebar";
+@import "scss/sticky";
+@import "scss/tab";
+@import "scss/transition";

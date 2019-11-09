@@ -1,0 +1,225 @@
+/*!
+ * # Semantic UI - Nag
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+@import 'default.less';
+
+/********************************
+*           Theme
+*******************************/
+
+@type    : 'module';
+@element : 'nag';
+
+/********************************
+*         Variables
+*******************************/
+
+/*---------------
+*   Collection
+---------------*/
+
+@position: relative;
+@width: 100%;
+@zIndex: 999;
+@margin: 0em;
+
+@background: #555555;
+@opacity: 0.95;
+@minHeight: 0em;
+@padding: 0.75em 1em;
+@lineHeight: 1em;
+@boxShadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+
+@fontSize: 1rem;
+@textAlign: center;
+@color: @textColor;
+
+@transition: 0.2s background ease;
+
+/*---------------
+*    Elements
+---------------*/
+
+/* Title */
+@titleColor: @white;
+@titleMargin: 0em 0.5em;
+
+@closeSize: 1em;
+@closeMargin: (-@closeSize / 2) 0em 0em;
+@closeTop: 50%;
+@closeRight: 1em;
+@closeColor: @white;
+@closeTransition: opacity 0.2s ease;
+@closeOpacity: 0.4;
+
+/*---------------
+*      States
+---------------*/
+
+/* Hover */
+@nagHoverBackground: @background;
+@nagHoverOpacity: 1;
+
+@closeHoverOpacity: 1;
+
+/*---------------
+*   Variations
+---------------*/
+
+/* Top / Bottom */
+@top: 0em;
+@bottom: 0em;
+@borderRadius: @defaultBorderRadius;
+@topBorderRadius: 0em 0em @borderRadius @borderRadius;
+@bottomBorderRadius: @borderRadius @borderRadius 0em 0em;
+
+/* Inverted */
+@invertedBackground: @darkWhite;
+
+/*---------------
+*      Plural
+---------------*/
+
+@groupedBorderRadius: 0em;
+
+/********************************
+*            Nag
+*******************************/
+
+.ui.nag {
+  display: none;
+  opacity: @opacity;
+  position: @position;
+
+  top: @top;
+  left: 0px;
+  z-index: @zIndex;
+
+  min-height: @minHeight;
+  width: @width;
+
+  margin: @margin;
+  padding: @padding;
+
+  background: @background;
+  box-shadow: @boxShadow;
+
+  font-size: @fontSize;
+  text-align: @textAlign;
+  color: @color;
+
+  border-radius: @topBorderRadius;
+  transition: @transition;
+}
+
+a.ui.nag {
+  cursor: pointer;
+}
+
+.ui.nag > .title {
+  display: inline-block;
+  margin: @titleMargin;
+  color: @titleColor;
+}
+
+.ui.nag > .close.icon {
+  cursor: pointer;
+  opacity: @closeOpacity;
+
+  position: absolute;
+  top: @closeTop;
+  right: @closeRight;
+
+  font-size: @closeSize;
+
+  margin: @closeMargin;
+  color: @closeColor;
+  transition: @closeTransition;
+}
+
+/********************************
+*            States
+*******************************/
+
+/* Hover */
+.ui.nag:hover {
+  background: @nagHoverBackground;
+  opacity: @nagHoverOpacity;
+}
+
+.ui.nag .close:hover {
+  opacity: @closeHoverOpacity;
+}
+
+/********************************
+*          Variations
+*******************************/
+
+/*---------------
+*     Static
+---------------*/
+
+.ui.overlay.nag {
+  position: absolute;
+  display: block;
+}
+
+/*---------------
+*     Fixed
+---------------*/
+
+.ui.fixed.nag {
+  position: fixed;
+}
+
+/*---------------
+*     Bottom
+---------------*/
+
+.ui.bottom.nags,
+.ui.bottom.nag {
+  border-radius: @bottomBorderRadius;
+  top: auto;
+  bottom: @bottom;
+}
+
+/*---------------
+*     White
+---------------*/
+
+.ui.inverted.nags .nag,
+.ui.inverted.nag {
+  background-color: @invertedBackground;
+  color: @darkTextColor;
+}
+.ui.inverted.nags .nag .close,
+.ui.inverted.nags .nag .title,
+.ui.inverted.nag .close,
+.ui.inverted.nag .title {
+  color: @lightTextColor;
+}
+
+/********************************
+*          Groups
+*******************************/
+
+.ui.nags .nag {
+  border-radius: @groupedBorderRadius !important;
+}
+.ui.nags .nag:last-child {
+  border-radius: @topBorderRadius;
+}
+.ui.bottom.nags .nag:last-child {
+  border-radius: @bottomBorderRadius;
+}
+
+/********************************
+*        Theme Overrides
+*******************************/
